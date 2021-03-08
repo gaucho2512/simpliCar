@@ -15,5 +15,8 @@
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12"
+  }
 }

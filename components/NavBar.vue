@@ -15,9 +15,9 @@
            <nuxt-link class="nav-link"  to="/productos">Vehículos</nuxt-link>
         </li>
         
-        <li class="nav-item">
-           <nuxt-link class="nav-link" to="/detalles">detalles</nuxt-link>
-        </li>
+       <!--  <li class="nav-item">
+           <nuxt-link class="nav-link" to="/detalles">Detalles</nuxt-link>
+        </li> -->
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Buscar Vehículo" aria-label="Search">
@@ -42,10 +42,9 @@ export default {
 .nav-btn{
    font-size: 22px;
    margin-right: 150px;
-   
 }
+.nav-link{
+  color: black;
 
-
-
-
+}  
 </style>

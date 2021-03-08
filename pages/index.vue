@@ -24,7 +24,7 @@ export default {};
 .fondo-home {
   background-image: url(../assets/image/fondo3.jpg);
   max-width: 100%;
-  height: 1000px;
+  height: 1080px;
  
 }
 .titulo-home{
