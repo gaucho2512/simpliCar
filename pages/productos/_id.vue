@@ -8,8 +8,8 @@
   <!-- CAROUSEL -->
   <div class="row contenedor-image" >
       <div class="col-md-6">
-          <!--  <h1>{{ articulo.title }}</h1>
-             <p>{{ articulo.body }}</p> 
+          <!--  <h1></h1>
+             <p></p> 
              <nuxt-link to="/productos" class="btn btn-primary">atras</nuxt-link>  -->
 
              <h3 class="modelo-car"> MODELO DE AUTO</h3>
@@ -26,9 +26,9 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd" 
     >
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=140"></b-carousel-slide>
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=51"></b-carousel-slide>
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=52"></b-carousel-slide>
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=140">{{ articulo.body }}</b-carousel-slide>
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=51">{{ articulo.body }}</b-carousel-slide>
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=52">{{ articulo.body }}</b-carousel-slide>
     </b-carousel>
 
     <!-- CARD IMAGENES -->
@@ -37,7 +37,8 @@
          <div class="card color-border">
            <div class="card-body card-height">
                
-               <p>foto</p>
+               <h2>{{ articulo.id }}</h2>
+            
              </div>
          </div>
      </div>
@@ -46,7 +47,7 @@
          <div class="card color-border">
            <div class="card-body card-height">
                
-               <p>foto</p>
+              <h2>{{ articulo.id }}</h2>
              </div>
          </div>
      </div>
@@ -55,7 +56,7 @@
          <div class="card color-border">
            <div class="card-body card-height">
            
-               <p>foto</p>
+               <h2>{{ articulo.id }}</h2>
              </div>
          </div>
      </div>
@@ -117,7 +118,7 @@
             <input type="number" class="form-control input-form" id="phone" placeholder="TELÉFONO" v-model="phone">
         </div>
 
-        <button type="submit" class="btn btn-danger btn-lg btn-form" >ENVIARME LA COTIZACION POR MAIL</button>
+        <button type="submit" class="btn btn-danger btn-lg btn-form" >ENVIARME LA COTIZACIÓN POR MAIL</button>
         </form>
         </div>
 

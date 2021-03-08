@@ -5,8 +5,8 @@
         <div>
           <h1 class="titulo-home">AHORA ES ONLINE</h1>
           <p class="parrafo-home">
-            Con Nissan Store, podes acceder a tu nuevo 0Km con todos los
-            servicios asociados desde la comodidad de tu sofa. 
+            Con Nissan Store, podés acceder a tu nuevo 0Km con todos los
+            servícios asociados desde la comodidad de tu sofá. 
             Probanos!
           </p>
           <a href="https://www.nissan.com.ar/" target="_blank" class="btn btn-danger btn-lg btn-home"> INGRESAR A NISSAN STORE </a>
