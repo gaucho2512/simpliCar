@@ -60,14 +60,6 @@ export default {
         }
     },
 
-    /* INTENTO 9999999999999.999999999 y NO PUDE TRAER LA API, */
-  /* async created() {
-    const res = await axios.get("https://4my1q6hsyo.api.quickmocker.com/product", {
-  headers: {
-    authorization: "qwertyuiopasdfghjklzxcvbnm123456" 
-  }
-});
-  } */
 
    /* api de prueba */
      async created() {
@@ -79,7 +71,21 @@ export default {
     } catch (error) {
                 console.log(error)
 }   
-}  
+}   
+
+/* NO PUDE HACER ANDAR LA API , TENGO UN ERROR EN EL REQUEST */
+/* created() {
+  axios.get("https://4my1q6hsyo.api.quickmocker.com/product", {
+    method:"GET",
+    headers: {
+      "Content-Type" : "application/json",
+      Authorization: "Bearer" + "qwertyuiopasdfghjklzxcvbnm123456" 
+    },
+  })
+} */
+
+
+
    
 };  
 </script>
