@@ -1,7 +1,7 @@
  <template>
  <div>
   <div class="row productos" >
-    <div class="col-md-12">
+    <div class="col-sm-12 col-md-12 col-lg-12">
       <h2 class="title-productos">¿CUÁL VA A SER TU PROXIMO NISSAN?</h2>
     </div>
      </div>
@@ -34,13 +34,17 @@
  
   <div class="body-productos">
   <div class="row card-productos">
-    <div class="col-md-3 card my-4 ml-5" v-for="(item , index) in articulos" :key="index">
+    <div class="col-sm-3 col-md-3 col-lg-3 card my-4 ml-5" v-for="(item , index) in articulos" :key="index">
+  <picture>  {{item.gallery[0].medium}}
+             {{item.gallery[1].medium}}
+ </picture>
       <div class="card-body">
-          <nuxt-link :to="`productos/${item.id}`">
-              <h3>{{ item.title }}</h3>
-              <p> {{item.body}}</p>
-              <a href="#" class="btn btn-primary">VER</a>
-        </nuxt-link>
+         
+              <h3>{{ item.model }}</h3>
+              <p> PRECIO DESDE :  {{item.amount}}</p>
+            
+       <nuxt-link :to="`productos/${item.id}`" class="btn btn-danger"> VER DETALLES DEL MODELO  </nuxt-link>
+
       </div>
     </div>
   </div>
@@ -54,39 +58,25 @@
 export default {
     data() {
         return {
-            articulos: [],
-          
-
+            articulos: [],    
         }
     },
 
 
-   /* api de prueba */
-     async created() {
-
-         try {
-        const res = await axios.get("https://jsonplaceholder.typicode.com/posts?_limit=9") 
-        console.log(res.data)
-        this.articulos = res.data
-    } catch (error) {
-                console.log(error)
-}   
-}   
-
-/* NO PUDE HACER ANDAR LA API , TENGO UN ERROR EN EL REQUEST */
-/* created() {
-  axios.get("https://4my1q6hsyo.api.quickmocker.com/product", {
+/* LLAMADA A LA API CON AXIOS */
+  async created() {
+  const res = await axios.get("https://4my1q6hsyo.api.quickmocker.com/product", {
     method:"GET",
     headers: {
       "Content-Type" : "application/json",
       Authorization: "Bearer" + "qwertyuiopasdfghjklzxcvbnm123456" 
     },
   })
-} */
+  console.log(res.data.results)
+  this.articulos = res.data.results
+} ,
 
-
-
-   
+ 
 };  
 </script>
 

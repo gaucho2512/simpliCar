@@ -1,7 +1,7 @@
 <template>
   <div class="fondo-home">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-sm-6 col-md-6 col-lg-6">
         <div>
           <h1 class="titulo-home">AHORA ES ONLINE</h1>
           <p class="parrafo-home">

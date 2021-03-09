@@ -2,7 +2,7 @@
 <div>
     <footer>
           <div class="row">
-               <div class="col-md-12">
+               <div class="col-sm-12 col-md-12 col-lg-12">
                    <div>
                        <h2 class="title-footer">Nissan. Innovation that excites</h2>
                    </div>
@@ -11,27 +11,27 @@
 
 
           <div class="row">
-              <div class="col-md-3 info-1">
+              <div class="col-sm-3 col-md-3 col-lg-3 info-1">
                  <div>
                     <p> COTIZACION DE VEHICULOS</p>
                 </div>
              </div>
 
-                  <div class="col-md-3 info-1">
+                  <div class="col-sm-3 col-md-3 col-lg-3 info-1">
                        <div>
                              <p> RALITOR S.A</p>
                          </div>
                      </div>  
 
 
-                    <div class="col-md-3 info-1">
+                    <div class="col-sm-3 col-md-3 col-lg-3 info-1">
                        <div>
                              <p> AYUDA AL CLIENTE</p>
                          </div>
                    </div>
 
 
-                   <div class="col-md-3 info-1">
+                   <div class="col-sm-3 col-md-3 col-lg-3 info-1">
                        <div>
                             <p> NISSAN SOCIAL</p>
                       </div>
@@ -41,27 +41,27 @@
 
           
           <div class="row">
-              <div class="col-md-3 info-1">
+              <div class="col-sm-3 col-md-3 col-lg-3 info-1">
                  <div>
                     <p> Informacion Legal</p>
                 </div>
              </div>
 
-                  <div class="col-md-3 info-1">
+                  <div class="col-sm-3 col-md-3 col-lg-3 info-1">
                        <div>
                              <p> nissan.com.uy</p>
                          </div>
                      </div>  
 
 
-                    <div class="col-md-3 info-1">
+                    <div class="col-sm-3 col-md-3 col-lg-3 info-1">
                        <div>
                              <p> Politicas de privacidad</p>
                          </div>
                    </div>
 
 
-                   <div class="col-md-3 info-1">
+                   <div class="col-sm-3 col-md-3 col-lg-3 info-1">
                        <div>
                         <a href="https://www.facebook.com/Simplicar/" target="_blank"><img class="logo-facebook" src="../assets/image/facebook.png" alt="facebook"></a>    
                         <a href="https://www.instagram.com/simplicar.argentina/?hl=es-la" target="_blank"> <img class="logos-footer" src="../assets/image/instagram.png" alt="instagram"></a> 
@@ -71,7 +71,7 @@
               </div>
           </div>
           <div class="row">
-              <div class="col-md-12">
+              <div class="col-sm-12 col-md-12 col-lg-12">
                   <div>
                       <p class="info-2">Politicas de Cookies</p>
                   </div>
@@ -81,7 +81,7 @@
           <div class="division"></div>
 
           <div class="row">
-              <div class="col-md-12">
+              <div class="col-sm-12 col-md-12 col-lg-12">
                   <div>
                      <a href="http://www.simplicar.com/" target="_blank"><p class="info-3">® 2020 SIMPLICAR. Todos los derechos reservados.</p></a> 
                   </div>

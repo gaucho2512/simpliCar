@@ -7,12 +7,9 @@
 
   <!-- CAROUSEL -->
   <div class="row contenedor-image" >
-      <div class="col-md-6">
-          <!--  <h1></h1>
-             <p></p> 
-             <nuxt-link to="/productos" class="btn btn-primary">atras</nuxt-link>  -->
-
-             <h3 class="modelo-car"> MODELO DE AUTO</h3>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        
+     <h3 class="modelo-car"> MODELO DE AUTO : {{articulo.model}}</h3>
            
  <b-carousel
       id="carousel-1"
@@ -26,37 +23,37 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd" 
     >
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=140">{{ articulo.body }}</b-carousel-slide>
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=51">{{ articulo.body }}</b-carousel-slide>
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=52">{{ articulo.body }}</b-carousel-slide>
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=140"></b-carousel-slide>
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=51"></b-carousel-slide>
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=52"></b-carousel-slide>
     </b-carousel>
 
     <!-- CARD IMAGENES -->
  <div class="row card-image">
-     <div class="col-md-4">
+     <div class="col-sm-4 col-md-4 col-lg-4">
          <div class="card color-border">
            <div class="card-body card-height">
                
-               <h2>{{ articulo.id }}</h2>
+               <h2> imagen {{ articulo.gallery }}</h2>
             
              </div>
          </div>
      </div>
 
-      <div class="col-md-4">
+      <div class="col-sm-4 col-md-4 col-lg-4">
          <div class="card color-border">
            <div class="card-body card-height">
                
-              <h2>{{ articulo.id }}</h2>
+              <h2> imagen {{ articulo.gallery }}</h2>
              </div>
          </div>
      </div>
 
-      <div class="col-md-4">
+      <div class="col-sm-4 col-md-4 col-lg-4">
          <div class="card color-border">
            <div class="card-body card-height">
            
-               <h2>{{ articulo.id }}</h2>
+               <h2> imagen {{ articulo.gallery }}</h2>
              </div>
          </div>
      </div>
@@ -67,8 +64,9 @@
 
 
   <div class="row">
-      <div class="col-md-6">
-          <h1>info autos</h1>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+          <p> Detalles tecnicos{{articulo.technical_details}}</p>
+          
       </div>
   </div>
 
@@ -77,11 +75,11 @@
  <div class="division2"></div>
 
  <div class="row">
-     <div class="col-md-6 div-anclas">
+     <div class="col-sm-6 col-md-6 col-lg-6 div-anclas">
       <a  class="text-anclas" href=""> VER TODAS LAS CARACTERÍSTICAS </a>
      </div>
 
-     <div class="col-md-6 div-anclas">
+     <div class="col-sm-6 col-md-6 col-lg-6 div-anclas">
         <a class="text-anclas" href=""> VER GALERÍA DE IMÁGENES</a>
      </div>
  </div>
@@ -95,7 +93,7 @@
 
 
 <!-- FORMULARIO -->
-<div class="col-md-6">
+<div class="col-sm-6 col-md-6 col-lg-6">
      
         <h1>INGRESA TUS DÁTOS</h1>
         <p>Por favor completa el siguiente formulario para que uno de nuestros
@@ -121,15 +119,6 @@
         <button type="submit" class="btn btn-danger btn-lg btn-form" >ENVIARME LA COTIZACIÓN POR MAIL</button>
         </form>
         </div>
-
-
-
-
-
-
-
-
-
     </div>
   </div>
 </template>
@@ -143,7 +132,6 @@ export default {
       return {
         slide: 0,
         sliding: null,
-        articulo: null,
         usuario: "",
         email : "" ,
         phone: "" , 
@@ -163,18 +151,28 @@ export default {
         const response = await axios.post( "login", {
             nombre: this.nombre,
             email: this.email,
-            phone: this.phone
+            phone: this.phone,
+            articulo: null
 
         })
         console.log(response)
     },
 
-      /*  "Authorization: Bearer qwertyuiopasdfghjklzxcvbnm123456" */
+      
 
       async asyncData({params , route , res , store , error}) {
-         try {  const res = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
-         const articulo = res.data
+         try {  const res = await axios.get(`https://4my1q6hsyo.api.quickmocker.com/product/${params.id}`, {
+               method:"GET",
+               headers: { "Content-Type" : "application/json",
+               Authorization: "Bearer" + "qwertyuiopasdfghjklzxcvbnm123456" 
+               },
+         })
+         const articulo = res.data.results
+         console.log(articulo)
+
+
             return {articulo}
+            
              
          } catch (error) {
              console.log(error)
@@ -196,7 +194,8 @@ export default {
 .color-link{
     margin-top: 6px;
     margin-left: 150px;
-    padding-top: 20px;
+    padding: 10px;
+    
 }
 .contenedor-image{
     width: 100%;
