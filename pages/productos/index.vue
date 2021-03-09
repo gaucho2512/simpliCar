@@ -35,9 +35,10 @@
   <div class="body-productos">
   <div class="row card-productos">
     <div class="col-sm-3 col-md-3 col-lg-3 card my-4 ml-5" v-for="(item , index) in articulos" :key="index">
-  <picture>  {{item.gallery[0].medium}}
-             {{item.gallery[1].medium}}
- </picture>
+      <img :src="item.gallery[2].large" alt="">
+    
+           
+ 
       <div class="card-body">
          
               <h3>{{ item.model }}</h3>
@@ -100,7 +101,7 @@ export default {
   height: 80px;
 }
 .body-productos{
-  height: 1500px;
+  height: 1700px;
 }
 
 
